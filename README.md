@@ -1,0 +1,1 @@
+Front End Util write by Typescript
