@@ -15,6 +15,15 @@ export function isNumberFinite(value: any): boolean {
   return typeof value === 'number' && isFinite(value);
 }
 
+/**
+ * 返回保留多少位的结果
+ * @param value 
+ * @param decimal 
+ */
+export function toDecimal(value: number, decimal: number): number {
+  return Math.round(value * Math.pow(10, decimal)) / Math.pow(10, decimal);
+}
+
 
 
 
