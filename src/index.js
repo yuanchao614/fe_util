@@ -8,8 +8,11 @@ function arrayFindIndex(arr, pred) {
   return arr.findIndex(pred);
 }
 
-const dayOfYear = date =>
-  Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+function toDecimal(value, decimal) {
+  return Math.round(value * Math.pow(10, decimal)) / Math.pow(10, decimal);
+}
+
 console.log(arrayFlat([1, [2, [3, [4]]], 5, [[7]]]));
 console.log(arrayFindIndex([1, 2, 3, 4], (data) => data === 4));
-console.log(dayOfYear(new Date()));
+// console.log(dayOfYear(new Date()));
+console.log(toDecimal(1.23456, 2));

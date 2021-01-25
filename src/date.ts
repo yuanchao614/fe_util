@@ -23,6 +23,8 @@ export function daysFromNow(day: number): string {
  * @param date 
  * @param locale 
  */
-export function dayName(date: any, locale = undefined) {
-  date.toLocaleDateString(locale, { weekday: 'long' });
+export function dayName(date: unknown, locale = undefined) {
+  if (date instanceof Date) {
+    date.toLocaleDateString(locale, { weekday: 'long' });
+  }
 }
