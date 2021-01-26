@@ -18,6 +18,7 @@ fu.toArray('abc') // ['abc']
 
 - [Array](#array)
 - [Date](#date)
+- [Dom](#dom)
 - [Email](#email)
 - [Format](#format)
 - [Number](#number)
@@ -44,6 +45,48 @@ fu.daysAgo(7) // 2021-01-18 (if current date is 2021-01-25)
 
 ```ts
 fu.daysFromNow(1) // 2021-01-26 (if current date is 2021-01-25)
+```
+
+## Dom
+
+### 判断HTMLElement上是否存在指定class
+
+```ts
+ const image = document.createElement('img');
+ image.className = 'test-yc-class';
+ image.classList.add("anotherclass");
+ fu.hasClass(image, 'anotherclass') // true
+ fu.hasClass(image, 'test-yc') // false
+```
+
+### HTMLElement上添加指定class
+
+```ts
+fu.addClass(image, 'test-class')
+```
+
+### HTMLElement上移除指定class
+
+```ts
+fu.removeClass(image, 'test-class')
+```
+
+### 获取HTMLElement上style
+
+```ts
+fu.getStyle(image, 'width')
+```
+
+### HTMLElement上添加style
+
+```ts
+fu.setStyle(image, 'height', '200px')
+```
+
+### HTMLElement上移除style
+
+```ts
+fu.removeStyle(image, 'height')
 ```
 
 ## Email
