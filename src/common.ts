@@ -26,3 +26,7 @@ export function isObject(val: unknown): val is Record<any, any> {
 export function isPromise<T = any>(val: unknown): val is Promise<T> {
   return isObject(val) && isFunction(val.then) && isFunction(val.catch);
 }
+
+export const trim = function(s: string) {
+  return (s || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '')
+}
